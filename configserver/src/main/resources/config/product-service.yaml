@@ -1,0 +1,21 @@
+server:
+  port: 8083
+
+spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/product
+#    username: sudhanshu
+#    password: sudhanshu
+  datasource:
+    url: jdbc:postgresql://ep-twilight-forest-aemf4mlq-pooler.c-2.us-east-2.aws.neon.tech/product?sslmode=require&channel_binding=require
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+
+# spring:
+
