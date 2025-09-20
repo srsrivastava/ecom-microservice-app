@@ -2,10 +2,6 @@ server:
   port: 8083
 
 spring:
-#  datasource:
-#    url: jdbc:postgresql://localhost:5432/product
-#    username: sudhanshu
-#    password: sudhanshu
   datasource:
     url: jdbc:postgresql://ep-twilight-forest-aemf4mlq-pooler.c-2.us-east-2.aws.neon.tech/product?sslmode=require&channel_binding=require
     username: ${DB_USERNAME}
@@ -17,5 +13,11 @@ spring:
     hibernate:
       ddl-auto: update
 
-# spring:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    register-with-eureka: true
+    fetch-registry: true
 

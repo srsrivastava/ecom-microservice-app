@@ -3,25 +3,3 @@ spring:
     name: user-service
   config:
     import: optional:configserver:http://localhost:8888
-
-#spring.h2.console.enabled=true
-#spring.datasource.url=jdbc:h2:mem:test
-#spring.jpa.show-sql= true
-#spring.jpa.hibernate.ddl-auto=create
-
-#PostgreSQL configuration
-
-#spring.datasource.url=jdbc:postgresql://localhost:5432/userdb
-#spring.datasource.username=sudhanshu
-#spring.datasource.password=sudhanshu
-#spring.jpa.database=POSTGRESQL
-#spring.jpa.show-sql=true
-#spring.jpa.database-platform=org.hibernate.dialect.PostgreSQLDialect
-#spring.jpa.hibernate.ddl-auto=update
-
-
-#spring.data.mongodb.uri=mongodb+srv://factsenthralling:uZ5Zks9aN5pFBlBe@usermic.pvtbfu5.mongodb.net/?retryWrites=true&w=majority&appName=usermic
-#spring.data.mongodb.uri=mongodb://localhost:27017/users
-#spring.data.mongodb.database=userdb
-#
-#server.port=8082
