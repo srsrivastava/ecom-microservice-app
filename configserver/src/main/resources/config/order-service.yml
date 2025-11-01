@@ -7,6 +7,12 @@ spring:
     username: root
     password: root
 
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
   jpa:
     database: MYSQL
     show-sql: true
@@ -16,6 +22,14 @@ spring:
 
 server:
   port: 8081
+
+rabbitmq:
+  exchange:
+    name: order.exchange
+  queue:
+    name: order.queue
+  routing:
+    key: order.tracking
 
 management:
   endpoints:
@@ -49,3 +63,8 @@ resilience4j:
         failureRateThreshold: 50
         automaticTransitionFromOpenToHalfOpenEnabled: true
         slidingWindowType: count_based
+  retry:
+    instances:
+      retryBreaker:
+        maxAttempts: 5
+        waitDuration: 5s
